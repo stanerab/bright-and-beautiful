@@ -155,12 +155,26 @@
   .review-card .rc-num{font-family:'Fraunces'; font-size:26px; margin-bottom:2px;}
   .review-card .rc-label{font-family:'IBM Plex Mono'; font-size:10.5px; color:var(--stone); text-transform:uppercase; letter-spacing:0.08em;}
 
-  /* ---------- TRUST STRIP ---------- */
-  #trust{background:var(--ink); padding:22px 0;}
-  .trust-inner{display:flex; align-items:center; justify-content:center; gap:56px; flex-wrap:wrap;}
-  .trust-item{display:flex; align-items:center; gap:10px; color:var(--paper);}
+  /* ---------- TRUST STRIP (motion slider) ---------- */
+  #trust{background:var(--ink); padding:22px 0; overflow:hidden;}
+  .trust-track{
+    display:flex; align-items:center; width:max-content;
+    animation:trustScroll 26s linear infinite;
+  }
+  #trust:hover .trust-track{animation-play-state:paused;}
+  .trust-inner{display:flex; align-items:center; gap:56px; padding-right:56px; flex-shrink:0;}
+  .trust-item{display:flex; align-items:center; gap:10px; color:var(--paper); white-space:nowrap;}
   .trust-item .stars{color:var(--red); font-size:14px; letter-spacing:2px;}
   .trust-item span{font-family:'IBM Plex Mono'; font-size:12.5px; text-transform:uppercase; letter-spacing:0.08em; opacity:0.85;}
+  @keyframes trustScroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media(prefers-reduced-motion: reduce){
+    .trust-track{animation:none;}
+    .trust-inner{padding-right:0;}
+    #trust .wrap{overflow-x:auto;}
+  }
 
   /* ---------- SECTION HEADS ---------- */
   .sec-head{max-width:640px; margin-bottom:56px;}
@@ -372,11 +386,19 @@
 </section>
 
 <section id="trust">
-  <div class="wrap trust-inner">
-    <div class="trust-item"><span class="stars">★★★★★</span><span>5.0 Google Rating</span></div>
-    <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">45+</span><span>Customer Reviews</span></div>
-    <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">Local</span><span>Wolverhampton Team</span></div>
-    <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">Free</span><span>No-Obligation Quotes</span></div>
+  <div class="trust-track">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="stars">★★★★★</span><span>5.0 Google Rating</span></div>
+      <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">45+</span><span>Customer Reviews</span></div>
+      <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">Local</span><span>Wolverhampton Team</span></div>
+      <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">Free</span><span>No-Obligation Quotes</span></div>
+    </div>
+    <div class="trust-inner" aria-hidden="true">
+      <div class="trust-item"><span class="stars">★★★★★</span><span>5.0 Google Rating</span></div>
+      <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">45+</span><span>Customer Reviews</span></div>
+      <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">Local</span><span>Wolverhampton Team</span></div>
+      <div class="trust-item"><span class="mono" style="color:var(--paper); font-size:13px;">Free</span><span>No-Obligation Quotes</span></div>
+    </div>
   </div>
 </section>
 
