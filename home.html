@@ -555,16 +555,19 @@
     </div>
     <div class="rev-grid reveal">
       <div class="rev-card">
+        <span class="rev-pending">Example — pending verification</span>
         <span class="rc-stars">★★★★★</span>
         <p class="quote">"Extremely professional and did a very good job — couldn't recommend them enough."</p>
         <div class="rev-who"><div class="rev-avatar">S</div><div><div class="rev-name">Sarah W.</div></div></div>
       </div>
       <div class="rev-card">
+        <span class="rev-pending">Example — pending verification</span>
         <span class="rc-stars">★★★★★</span>
         <p class="quote">"The team did an exceptional job on our deep clean — the property was completely transformed."</p>
         <div class="rev-who"><div class="rev-avatar">J</div><div><div class="rev-name">James T.</div></div></div>
       </div>
       <div class="rev-card">
+        <span class="rev-pending">Example — pending verification</span>
         <span class="rc-stars">★★★★★</span>
         <p class="quote">Space reserved for a genuine review, to be added once confirmed with the business.</p>
         <div class="rev-who"><div class="rev-avatar">M</div><div><div class="rev-name">M. Patel</div></div></div>
@@ -665,12 +668,12 @@
             <textarea id="q-notes" name="notes" placeholder="Tell us a little more about your home or requirements..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Request My Free Quote</button>
-          <p class="form-note">This is a demo form — no data is sent or stored, and no backend is currently connected.</p>
+          <p class="form-note">Demo mode — this saves your enquiry to a local database for testing.</p>
         </div>
         <div class="success-msg" id="successMsg">
           <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <h3>Thank you</h3>
-          <p>Your enquiry has been received in this demo. Once connected to a live backend, this would notify the business directly.</p>
+          <p>Your enquiry has been received and saved. We'll be in touch shortly with your tailored quote.</p>
         </div>
       </form>
     </div>
@@ -825,12 +828,52 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Mock form submission — no backend is connected in this demo
+  // Real form submission — posts to the Node/Express API, which saves the
+  // enquiry into MySQL. The API runs separately at http://localhost:3001.
+  const API_BASE_URL = 'http://localhost:3001';
+
   const form = document.getElementById('quoteForm');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.getElementById('formFields').style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const payload = {
+      fullName: document.getElementById('q-name').value.trim(),
+      phone: document.getElementById('q-phone').value.trim(),
+      email: document.getElementById('q-email').value.trim(),
+      postcode: document.getElementById('q-postcode').value.trim(),
+      serviceType: document.getElementById('q-service').value,
+      propertyType: document.getElementById('q-property').value,
+      preferredDate: document.getElementById('q-date').value || null,
+      frequency: document.getElementById('q-frequency').value || null,
+      additionalInfo: document.getElementById('q-notes').value.trim() || null,
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/quote-requests`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        document.getElementById('formFields').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        alert(result.error || 'Something went wrong — please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    } catch (err) {
+      alert('Could not reach the server. Make sure the backend is running, then try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }
   });
 </script>
 

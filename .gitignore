@@ -1,0 +1,11 @@
+# Environment variables (real credentials — never commit)
+.env
+server/.env
+
+# Node
+server/node_modules/
+npm-debug.log
+
+# OS
+.DS_Store
+Thumbs.db
