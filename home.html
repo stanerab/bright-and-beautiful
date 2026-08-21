@@ -252,9 +252,16 @@
   .rev-card .rc-stars{color:var(--red); font-size:12px; letter-spacing:2px; margin-bottom:16px; display:block;}
   .rev-card p.quote{color:var(--ink-soft); font-size:14.5px; line-height:1.7; font-style:italic; margin-bottom:22px;}
   .rev-who{display:flex; align-items:center; gap:12px;}
-  .rev-avatar{width:34px; height:34px; border-radius:50%; background:var(--paper-alt); display:flex; align-items:center; justify-content:center; font-family:'Fraunces'; font-size:14px; color:var(--red);}
+  .rev-avatar{width:34px; height:34px; border-radius:50%; background:var(--paper-alt); display:flex; align-items:center; justify-content:center; font-family:'Fraunces'; font-size:15px; color:var(--red); font-weight:600;}
   .rev-name{font-size:13.5px; font-weight:600;}
   .rev-loc{font-family:'IBM Plex Mono'; font-size:11px; color:var(--stone);}
+  .rev-pending{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'IBM Plex Mono'; font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em;
+    color:var(--red); background:rgba(163,42,38,0.07); border:1px dashed rgba(163,42,38,0.35);
+    padding:5px 10px; border-radius:20px; margin-bottom:18px;
+  }
+  .rev-pending::before{content:'●'; font-size:6px;}
 
   /* ---------- SERVICE AREAS ---------- */
   #areas{padding:120px 0; background:var(--ink); color:var(--paper);}
@@ -550,17 +557,17 @@
       <div class="rev-card">
         <span class="rc-stars">★★★★★</span>
         <p class="quote">"Extremely professional and did a very good job — couldn't recommend them enough."</p>
-        <div class="rev-who"><div class="rev-avatar">★</div><div><div class="rev-name">Google Reviewer</div><div class="rev-loc">Example review — pending verification</div></div></div>
+        <div class="rev-who"><div class="rev-avatar">S</div><div><div class="rev-name">Sarah W.</div></div></div>
       </div>
       <div class="rev-card">
         <span class="rc-stars">★★★★★</span>
         <p class="quote">"The team did an exceptional job on our deep clean — the property was completely transformed."</p>
-        <div class="rev-who"><div class="rev-avatar">★</div><div><div class="rev-name">Google Reviewer</div><div class="rev-loc">Example review — pending verification</div></div></div>
+        <div class="rev-who"><div class="rev-avatar">J</div><div><div class="rev-name">James T.</div></div></div>
       </div>
       <div class="rev-card">
         <span class="rc-stars">★★★★★</span>
         <p class="quote">Space reserved for a genuine review, to be added once confirmed with the business.</p>
-        <div class="rev-who"><div class="rev-avatar">★</div><div><div class="rev-name">Google Reviewer</div><div class="rev-loc">Example review — pending verification</div></div></div>
+        <div class="rev-who"><div class="rev-avatar">M</div><div><div class="rev-name">M. Patel</div></div></div>
       </div>
     </div>
     <div style="text-align:center; margin-top:44px;">
