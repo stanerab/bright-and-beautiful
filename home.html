@@ -5,6 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bright &amp; Beautiful Wolverhampton | Professional Cleaning &amp; Housekeeping</title>
 <meta name="description" content="Professional house cleaning and housekeeping in Wolverhampton, Codsall, Tettenhall and surrounding areas. 5.0★ rated, 45+ reviews. Get a free quote today." />
+<link rel="canonical" href="https://www.brightandbeautifulhome.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Bright & Beautiful Wolverhampton | Professional Cleaning & Housekeeping" />
+<meta property="og:description" content="Professional house cleaning and housekeeping in Wolverhampton, Codsall, Tettenhall and surrounding areas. 5.0★ rated, 45+ reviews." />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- LocalBusiness structured data. Note: geo coordinates are the verified WV8 2JR
+     postcode centroid (OS/postcode data), not a rooftop-precise geocode of the
+     exact building — accurate enough for local SEO; swap in a precise geocode later if needed. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bright & Beautiful Wolverhampton",
+  "telephone": "+441902290290",
+  "url": "https://www.brightandbeautifulhome.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8 Birches Rd",
+    "addressLocality": "Codsall, Wolverhampton",
+    "postalCode": "WV8 2JR",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.619036,
+    "longitude": -2.176610
+  },
+  "areaServed": ["Wolverhampton", "Codsall", "Tettenhall", "Wombourne", "Perton", "Compton", "Penn", "Finchfield", "Bilston"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "45"
+  },
+  "priceRange": "££"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -301,6 +338,14 @@
   .mc-item:last-child{border-right:none; background:var(--red); color:var(--white);}
   .mc-item svg{width:19px; height:19px; stroke:currentColor; fill:none; stroke-width:1.6;}
 
+  /* ---------- ACCESSIBILITY: FOCUS STATES ---------- */
+  a:focus-visible, button:focus-visible, .btn:focus-visible{
+    outline: 2px solid var(--red); outline-offset: 3px; border-radius: 1px;
+  }
+  input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline: 2px solid var(--red); outline-offset: 1px;
+  }
+
   /* ---------- REVEAL ---------- */
   .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
@@ -336,10 +381,10 @@
 
 <nav id="nav">
   <div class="wrap nav-inner">
-    <div class="logo">
-      <div class="logo-mark">B&amp;B</div>
+    <a href="#hero" class="logo" aria-label="Bright & Beautiful Wolverhampton — back to top">
+      <div class="logo-mark">&amp;</div>
       <div class="logo-text">Bright &amp; Beautiful<span>Wolverhampton</span></div>
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#about">About</a>
@@ -374,7 +419,8 @@
     </div>
     <div class="hero-visual reveal in">
       <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Bright, freshly cleaned modern living room" />
+        <!-- PLACEHOLDER IMAGE — replace with the business's own photography once available -->
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Bright, freshly cleaned modern living room" fetchpriority="high" />
       </div>
       <div class="review-card">
         <div class="rc-stars">★★★★★</div>
@@ -441,8 +487,8 @@
       </div>
       <div class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 3l18 18M14 4l6 6M4 14l6 6" stroke-linecap="round"/></svg></div>
-        <h3>Post-Renovation Cleaning</h3>
-        <p>Clearing dust and debris after building or decorating work, room by room.</p>
+        <h3>After Building Cleaning</h3>
+        <p>Clearing dust and debris after renovation or building work, room by room.</p>
       </div>
       <div class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="1"/><path d="M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M7 8v10M17 8v10" stroke-linecap="round"/></svg></div>
@@ -456,7 +502,8 @@
 <section id="why">
   <div class="wrap why-grid">
     <div class="why-photo reveal">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Professional cleaner wiping down a kitchen surface" />
+      <!-- PLACEHOLDER IMAGE — replace with the business's own photography once available -->
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Professional cleaner wiping down a kitchen surface" loading="lazy" />
     </div>
     <div class="reveal">
       <div class="eyebrow">Why Bright &amp; Beautiful</div>
@@ -464,19 +511,19 @@
       <div class="why-list" style="margin-top:36px;">
         <div class="why-item">
           <div class="why-num">01</div>
-          <div><h3>Professional &amp; Reliable</h3><p>A dependable service designed around your schedule, not the other way round.</p></div>
+          <div><h3>Bespoke Housekeeping</h3><p>Cleaning, laundry and ironing designed around your home and your routine, not a fixed checklist.</p></div>
         </div>
         <div class="why-item">
           <div class="why-num">02</div>
-          <div><h3>Experienced Team</h3><p>Cleaners who take pride in the details and consistently high-quality results.</p></div>
+          <div><h3>Trusted Home Security</h3><p>Careful, professional procedures around access and keys, so you can relax while we're in your home.</p></div>
         </div>
         <div class="why-item">
           <div class="why-num">03</div>
-          <div><h3>Eco-Friendly Approach</h3><p>Environmentally conscious products used wherever appropriate.</p></div>
+          <div><h3>Eco-Friendly Products</h3><p>Environmentally conscious products used wherever appropriate, for a healthier home.</p></div>
         </div>
         <div class="why-item">
           <div class="why-num">04</div>
-          <div><h3>Local Wolverhampton Service</h3><p>A local team serving Wolverhampton and the surrounding areas.</p></div>
+          <div><h3>Professional Local Teams</h3><p>Carefully selected, trained cleaners serving Wolverhampton and the surrounding areas.</p></div>
         </div>
         <div class="why-item">
           <div class="why-num">05</div>
@@ -502,19 +549,22 @@
     <div class="rev-grid reveal">
       <div class="rev-card">
         <span class="rc-stars">★★★★★</span>
-        <p class="quote">"Hayley, Charmaine and the lovely girls were extremely professional and did a very good job — couldn't recommend them enough."</p>
-        <div class="rev-who"><div class="rev-avatar">R</div><div><div class="rev-name">R. Johnson</div><div class="rev-loc">Codsall</div></div></div>
+        <p class="quote">"Extremely professional and did a very good job — couldn't recommend them enough."</p>
+        <div class="rev-who"><div class="rev-avatar">★</div><div><div class="rev-name">Google Reviewer</div><div class="rev-loc">Example review — pending verification</div></div></div>
       </div>
       <div class="rev-card">
         <span class="rc-stars">★★★★★</span>
-        <p class="quote">"The team did an exceptional job on our deep clean — the property was completely transformed by the time they finished."</p>
-        <div class="rev-who"><div class="rev-avatar">S</div><div><div class="rev-name">S. Whitehouse</div><div class="rev-loc">Tettenhall</div></div></div>
+        <p class="quote">"The team did an exceptional job on our deep clean — the property was completely transformed."</p>
+        <div class="rev-who"><div class="rev-avatar">★</div><div><div class="rev-name">Google Reviewer</div><div class="rev-loc">Example review — pending verification</div></div></div>
       </div>
       <div class="rev-card">
         <span class="rc-stars">★★★★★</span>
-        <p class="quote">"Reliable, thorough and always on time. It's such a relief to come home to a properly clean house every week."</p>
-        <div class="rev-who"><div class="rev-avatar">M</div><div><div class="rev-name">M. Patel</div><div class="rev-loc">Wombourne</div></div></div>
+        <p class="quote">Space reserved for a genuine review, to be added once confirmed with the business.</p>
+        <div class="rev-who"><div class="rev-avatar">★</div><div><div class="rev-name">Google Reviewer</div><div class="rev-loc">Example review — pending verification</div></div></div>
       </div>
+    </div>
+    <div style="text-align:center; margin-top:44px;">
+      <a href="https://www.google.com/maps/search/?api=1&query=Bright+%26+Beautiful+Wolverhampton+8+Birches+Rd+Codsall+WV8+2JR" target="_blank" rel="noopener" class="btn btn-ghost">View all Google Reviews</a>
     </div>
   </div>
 </section>
@@ -558,17 +608,17 @@
       <form class="quote-card" id="quoteForm">
         <div id="formFields">
           <div class="f-row">
-            <div class="f-group"><label>Full Name</label><input type="text" required placeholder="Jane Smith" /></div>
-            <div class="f-group"><label>Phone Number</label><input type="tel" required placeholder="07xxx xxxxxx" /></div>
+            <div class="f-group"><label for="q-name">Full Name</label><input id="q-name" name="name" type="text" required placeholder="Jane Smith" /></div>
+            <div class="f-group"><label for="q-phone">Phone Number</label><input id="q-phone" name="phone" type="tel" required placeholder="07xxx xxxxxx" /></div>
           </div>
           <div class="f-row">
-            <div class="f-group"><label>Email Address</label><input type="email" required placeholder="jane@email.com" /></div>
-            <div class="f-group"><label>Postcode</label><input type="text" required placeholder="WV8 2JR" /></div>
+            <div class="f-group"><label for="q-email">Email Address</label><input id="q-email" name="email" type="email" required placeholder="jane@email.com" /></div>
+            <div class="f-group"><label for="q-postcode">Postcode</label><input id="q-postcode" name="postcode" type="text" required placeholder="WV8 2JR" /></div>
           </div>
           <div class="f-row">
             <div class="f-group">
-              <label>Type of Cleaning</label>
-              <select required>
+              <label for="q-service">Type of Cleaning</label>
+              <select id="q-service" name="service" required>
                 <option value="">Select...</option>
                 <option>Regular House Cleaning</option>
                 <option>Deep Cleaning</option>
@@ -579,8 +629,8 @@
               </select>
             </div>
             <div class="f-group">
-              <label>Property Type</label>
-              <select required>
+              <label for="q-property">Property Type</label>
+              <select id="q-property" name="property" required>
                 <option value="">Select...</option>
                 <option>Flat / Apartment</option>
                 <option>Terraced House</option>
@@ -591,10 +641,10 @@
             </div>
           </div>
           <div class="f-row">
-            <div class="f-group"><label>Preferred Date</label><input type="date" /></div>
+            <div class="f-group"><label for="q-date">Preferred Date</label><input id="q-date" name="date" type="date" /></div>
             <div class="f-group">
-              <label>Frequency</label>
-              <select>
+              <label for="q-frequency">Frequency</label>
+              <select id="q-frequency" name="frequency">
                 <option value="">Select...</option>
                 <option>Weekly</option>
                 <option>Fortnightly</option>
@@ -604,16 +654,16 @@
             </div>
           </div>
           <div class="f-group full" style="margin-bottom:22px;">
-            <label>Additional Information</label>
-            <textarea placeholder="Tell us a little more about your home or requirements..."></textarea>
+            <label for="q-notes">Additional Information</label>
+            <textarea id="q-notes" name="notes" placeholder="Tell us a little more about your home or requirements..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Request My Free Quote</button>
-          <p class="form-note">This is a demo form — no data is sent or stored.</p>
+          <p class="form-note">This is a demo form — no data is sent or stored, and no backend is currently connected.</p>
         </div>
         <div class="success-msg" id="successMsg">
           <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <h3>Quote request received</h3>
-          <p>Thanks — we'll be in touch shortly with your tailored quote.</p>
+          <h3>Thank you</h3>
+          <p>Your enquiry has been received in this demo. Once connected to a live backend, this would notify the business directly.</p>
         </div>
       </form>
     </div>
@@ -623,7 +673,8 @@
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
-      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Bright, tidy modern bedroom" />
+      <!-- PLACEHOLDER IMAGE — replace with the business's own photography once available -->
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Bright, tidy modern bedroom" loading="lazy" />
     </div>
     <div class="about-copy reveal">
       <div class="eyebrow">About Us</div>
@@ -654,18 +705,29 @@
       </div>
       <div class="contact-detail">
         <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><b>Website</b><a href="#">brightandbeautifulhome.com</a></div>
+        <div><b>Website</b><a href="https://www.brightandbeautifulhome.com/" target="_blank" rel="noopener">brightandbeautifulhome.com</a></div>
       </div>
       <div class="contact-btns">
         <a href="tel:01902290290" class="btn btn-white">Call Now</a>
-        <a href="#" class="btn" style="background:#25D366; color:#fff;">WhatsApp Us</a>
+        <a href="#" class="btn whatsapp-btn" data-whatsapp-btn style="background:#25D366; color:#fff;">WhatsApp Us</a>
         <a href="#quote" class="btn btn-primary">Request Quote</a>
       </div>
     </div>
-    <div class="map-box reveal">
-      <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-      <div class="addr">8 Birches Rd, Codsall<br>Wolverhampton, WV8 2JR</div>
-      <p>Map preview area — connect Google Maps here for the live site.</p>
+    <div class="map-box reveal" style="padding:0; overflow:hidden; min-height:auto;">
+      <iframe
+        title="Bright & Beautiful Wolverhampton location — 8 Birches Rd, Codsall, Wolverhampton WV8 2JR"
+        src="https://maps.google.com/maps?q=8+Birches+Rd,+Codsall,+Wolverhampton+WV8+2JR&output=embed"
+        width="100%" height="300" style="border:0; display:block;" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div style="padding:26px 24px; background:#211D1A;">
+        <div style="font-family:'IBM Plex Mono'; font-size:11.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--coral); margin-bottom:8px;">Find Us</div>
+        <div class="addr" style="text-align:left; margin-bottom:18px;">8 Birches Rd, Codsall<br>Wolverhampton, WV8 2JR</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="https://www.google.com/maps/search/?api=1&query=8+Birches+Rd,+Codsall,+Wolverhampton+WV8+2JR" target="_blank" rel="noopener" class="btn btn-white" style="padding:11px 18px; font-size:13px;">View on Google Maps</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=8+Birches+Rd,+Codsall,+Wolverhampton+WV8+2JR" target="_blank" rel="noopener" class="btn btn-primary" style="padding:11px 18px; font-size:13px;">Get Directions</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -689,7 +751,7 @@
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Call
     </a>
-    <a href="#" class="mc-item">
+    <a href="#" class="mc-item whatsapp-btn" data-whatsapp-btn>
       <svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1-5.4A8.4 8.4 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z" stroke-linejoin="round"/></svg>
       WhatsApp
     </a>
@@ -701,6 +763,34 @@
 </div>
 
 <script>
+  // ---------------------------------------------------------
+  // SITE CONFIG — edit these when real details are confirmed
+  // ---------------------------------------------------------
+  const SITE_CONFIG = {
+    phone: '01902290290',
+    // WhatsApp number in international format with no spaces/symbols, e.g. '447123456789'.
+    // Leave empty until the business confirms a real WhatsApp number — buttons will
+    // stay visible but inactive rather than linking to a fake number.
+    whatsappNumber: ''
+  };
+
+  // Wire up every WhatsApp button from config
+  document.querySelectorAll('[data-whatsapp-btn]').forEach(btn => {
+    if (SITE_CONFIG.whatsappNumber) {
+      btn.href = `https://wa.me/${SITE_CONFIG.whatsappNumber}`;
+      btn.target = '_blank';
+      btn.rel = 'noopener';
+    } else {
+      btn.classList.add('is-disabled');
+      btn.style.opacity = '0.55';
+      btn.style.cursor = 'not-allowed';
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('WhatsApp is being set up for this business — please call 01902 290290 in the meantime.');
+      });
+    }
+  });
+
   // Nav scroll state
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -728,7 +818,7 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Mock form submission
+  // Mock form submission — no backend is connected in this demo
   const form = document.getElementById('quoteForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
